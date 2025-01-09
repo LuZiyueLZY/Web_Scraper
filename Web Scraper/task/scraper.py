@@ -44,5 +44,6 @@ for page in range(1, int(num_page) + 1):
                     with open(f'Page_{page}/{article_title}.txt', 'w', encoding='utf-8') as file:
                         file.write(body)
                     print(f'File {article_title}.txt has been created.')
+                print('Saved all content.')
     except rq.exceptions.HTTPError as e:
         print(f'The URL returned {e.response.status_code}!')
